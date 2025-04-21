@@ -1,10 +1,10 @@
 import streamlit as st
 
 st.title("Unit Converter 😉")
-st.markdown("### Converts length, width and time")
+st.markdown("### Converts length, weight and time")
 st.write("Select a categaory!")
 
-category = st.selectbox("Choose from here", ["Length", "Width", "Time"])
+category = st.selectbox("Choose from here", ["Length", "Weight", "Time"])
 
 def convert_units(category, value, unit):
     if category == "Length":
@@ -20,7 +20,7 @@ def convert_units(category, value, unit):
             return value / 2.20462
     
     elif category == "Time":
-        if unit == "second to minutes":
+        if unit == "seconds to minutes":
             return value / 60
         elif unit == "minutes to seconds":
             return value * 60
